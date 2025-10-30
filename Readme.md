@@ -1,4 +1,4 @@
-# React + Vite + TypeScript – State
+# React + Vite + TypeScript  State
 A React project built with Vite and TypeScript. 
 This project demonstrates effective use of useState for UI control (sidebar visibility) and dynamic component behavior.
  
