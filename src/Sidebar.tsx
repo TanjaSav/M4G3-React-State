@@ -42,7 +42,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onClose }) => {
           }}
         >
             <img
-              src={`${base}img/Close_icon.svg`}
+              src={`${base}img/Close_nav_icon.svg`}
               alt="Close"
             />
         </button>
