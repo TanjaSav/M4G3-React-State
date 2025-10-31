@@ -3,9 +3,14 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import PromoBanner from './promoBanner';
 
+
+
 function App() {
   // State to control whether the sidebar is open or closed
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  // Determine the base URL for assets
+  const base = import.meta.env.BASE_URL;
 
   return (
     // Main container with relative positioning and full minimum height
@@ -18,9 +23,9 @@ function App() {
       <PromoBanner
       subtitle="Soft, buttery layers that taste like home"
         buttonText="Shop Now"
-        imageSrc="/src/assets/images/PastriesPromo.jpg"
+        imageSrc= {`${base}img/PastriesPromo.jpg`}
         backgroundColor="#FFF8F8"
-        buttonColor="#007E23F"
+        buttonColor ='#007E23FF'
         clickedColor="#30ac33ff"
         border="1px solid #E03400"/>
 

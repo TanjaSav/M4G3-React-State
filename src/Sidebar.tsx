@@ -4,6 +4,8 @@ import React from 'react';
 interface SidebarProps {
   onClose: () => void;
 }
+// Determine the base URL for assets
+const base = import.meta.env.BASE_URL;
 
 // Sidebar functional component
 const Sidebar: React.FC<SidebarProps> = ({ onClose }) => {
@@ -40,7 +42,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onClose }) => {
           }}
         >
             <img
-              src="/src/assets/images/Close_nav_icon.svg"
+              src={`${base}img/Close_icon.svg`}
               alt="Close"
             />
         </button>

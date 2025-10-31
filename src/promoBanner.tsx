@@ -1,6 +1,9 @@
 // Import React and useState hook
 import React, { useState } from 'react';
 
+// Determine the base URL for assets
+const base = import.meta.env.BASE_URL;
+
 // Define the props interface for the PromoBanner component
 interface PromoBannerProps {
   subtitle: string;
@@ -16,7 +19,7 @@ interface PromoBannerProps {
 const PromoBanner: React.FC<PromoBannerProps>= ({
   subtitle = 'Soft, buttery layers that taste like home',
   buttonText = 'Shop Now',
-  imageSrc = "/src/assets/images/PastriesPromo.jpg",
+  imageSrc = `${base}img/PastriesPromo.jpg`,
   backgroundColor = '#FFF8F8',
   buttonColor ='#007E23FF',
   clickedColor='#03ac33ff',

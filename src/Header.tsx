@@ -6,16 +6,18 @@ interface HeaderProps {
 
 // Header component definition using React Functional Component syntax
 const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+  // Determine the base URL for assets
+  const base = import.meta.env.BASE_URL;
    // Local state to track which icon is currently active (if any)
   const [activeIcon, setActiveIcon] = useState<string | null>(null);
 
 
   // Icon definitions
   const icons = [
-    { id: 'search', src: '/src/assets/images/Search_nav_icon.svg', alt: 'Search', label: 'Search' },
-    { id: 'favorites', src: '/src/assets/images/Heart_nav_icon.svg', alt: 'Favorites', label: 'Favorites' },
-    { id: 'cart', src: '/src/assets/images/Cart_nav_icon.svg', alt: 'Cart', label: 'Cart' },
-    { id: 'menu', src: '/src/assets/images/Menu_nav_icon.svg', alt: 'Menu', label: 'Menu' },
+    { id: 'search', src: `${base}img/Search_nav_icon.svg`, alt: 'Search', label: 'Search' },
+    { id: 'favorites', src: `${base}img/Heart_nav_icon.svg`, alt: 'Favorites', label: 'Favorites' },
+    { id: 'cart', src: `${base}img/Cart_nav_icon.svg`, alt: 'Cart', label: 'Cart' },
+    { id: 'menu', src: `${base}img/Menu_nav_icon.svg`, alt: 'Menu', label: 'Menu' },
   ];
   
   const greenFilter = 'invert(26%) sepia(16%) saturate(1300%) hue-rotate(75deg) brightness(90%) contrast(90%)';
@@ -36,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
      {/* logo section */}
       <a href="/" style={{ display: 'inline-block' }}>
         <img
-          src="/src/assets/images/Logo_nav_icon.svg"
+          src= {`${base}img/Logo_nav_icon.svg`}
           alt="Broccoli Logo"
           style={{ width: '117px', height: '31px' }}
         />
